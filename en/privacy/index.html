@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy – Twine</title>
+  <meta name="description" content="Which data Twine and the study server process, what the server can and cannot see, crash reports, retention and deletion.">
+  <meta name="theme-color" content="#FAF6F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14131A" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://twine.devsalah.com/en/privacy/">
+  <link rel="alternate" hreflang="de" href="https://twine.devsalah.com/datenschutz/">
+  <link rel="alternate" hreflang="en" href="https://twine.devsalah.com/en/privacy/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brand" href="/en/"><img src="/bilder/symbol-platzhalter.svg" alt="" width="32" height="32">Twine</a>
+    <nav class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/en/privacy/" aria-current="page">Privacy</a></li>
+        <li><a href="/en/support/">Support</a></li>
+        <li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="page">
+  <div class="wrap prose">
+    <h1>Privacy</h1>
+    <p class="updated">Last updated: 15 November 2026</p>
+
+    <div class="box">
+      <p><strong>In short</strong></p>
+      <ul>
+        <li>Twine is a research prototype and is currently used only in a study via TestFlight.</li>
+        <li>Messages, status, sharing settings, the journal with photos and milestones are end-to-end encrypted. The server only stores them encrypted and cannot read them.</li>
+        <li>The server still sees metadata: which two accounts form a couple, when devices are connected, when and how many encrypted messages of which size are exchanged, and IP addresses.</li>
+        <li>No ads, no tracking, no usage statistics sent to the study lead. Crash reports only if you turn them on.</li>
+      </ul>
+    </div>
+
+    <p>Contents:</p>
+    <ol class="toc">
+      <li><a href="#controller">Controller</a></li>
+      <li><a href="#website">This website</a></li>
+      <li><a href="#app">Twine and the study server</a></li>
+      <li><a href="#device">What stays on your iPhone</a></li>
+      <li><a href="#server">What the server stores and sees</a></li>
+      <li><a href="#limit">A limit of the encryption</a></li>
+      <li><a href="#push">Notifications</a></li>
+      <li><a href="#crash">Crash reports</a></li>
+      <li><a href="#testflight">TestFlight (Apple)</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#rights">Your rights and contact</a></li>
+    </ol>
+
+    <h2 id="controller">1. Controller</h2>
+    <p>For this website:</p>
+    <address>Salah Alhaji<br>Förderstedter Str. 36<br>39112 Magdeburg<br>Germany<br>Email: <a href="mailto:support@devsalah.com">support@devsalah.com</a></address>
+    <p>For the study data (study accounts, server data, crash reports): [open] – to be determined according to the rules of Hochschule Düsseldorf. Participants receive an information sheet and a consent form before the study starts; it names contacts, purpose and time limits of the study.</p>
+
+    <h2 id="website">2. This website</h2>
+    <p>The website is hosted on GitHub Pages and delivered via the Cloudflare network. To deliver the pages, these providers technically process your IP address and request data such as the requested page, time and browser. The legal basis is Art. 6(1)(f) GDPR: our legitimate interest in delivering the website reliably and securely. How long the providers keep this data is described in their privacy policies: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>.</p>
+    <p>The website itself sets no cookies, stores nothing in your browser and loads no fonts, scripts or analytics from third parties. Cloudflare protects the email addresses on these pages from spam bots: it can replace them in the page and add a small script, served from this website's own address, that displays them in your browser.</p>
+    <p>If you write to us by email, we use your address and your message only to answer you. Emails to addresses at devsalah.com are received via Cloudflare Email Routing and forwarded to our mailbox. The legal basis is Art. 6(1)(f) GDPR. We delete the messages once your request has been dealt with, unless statutory retention obligations apply.</p>
+
+    <h2 id="app">3. Twine and the study server</h2>
+    <p>Twine connects two people in a private, end-to-end encrypted space using the Matrix protocol. The app runs on a dedicated Matrix server that the study lead runs at Hetzner Online GmbH. The push gateway and, for crash reports only, GlitchTip run on the same server.</p>
+    <ul>
+      <li>There is no open sign-up; the study lead creates the accounts.</li>
+      <li>The server does not exchange data with other Matrix servers (federation is turned off).</li>
+      <li>Twine uses no advertising or analytics services and declares no tracking to Apple.</li>
+    </ul>
+
+    <h2 id="device">4. What stays on your iPhone</h2>
+    <ul>
+      <li>The app stores messages and its state in an encrypted database (SQLCipher). The key is kept in your iPhone's keychain.</li>
+      <li>The app creates your recovery key on your device. The study lead does not know it; the server only holds the backup encrypted with it.</li>
+      <li><strong>"For you":</strong> these prompts are created only on your device, are visible only to you and never leave the device. Both switches for them are off by default.</li>
+      <li><strong>"Anonymous usage statistics":</strong> if turned on, counting happens only on your device. The app does not send these numbers.</li>
+      <li><strong>Diagnostic log:</strong> a summary of technical findings (sign-in, connection, notifications, recovery key). It contains no messages, names, Twine IDs, room identifiers or keys, expires after 7 days at the latest and only leaves your device if you share it yourself.</li>
+      <li><strong>Permissions:</strong> Twine asks for access to your photos when you share a picture in the journal, and for Face ID for the app lock. Twine does not ask for your location.</li>
+    </ul>
+
+    <h2 id="server">5. What the server stores and sees</h2>
+    <p><strong>Stored:</strong> your account (identifier, display name, password as a hash), the list of your signed-in devices, your iPhone's push registration, the membership in your shared room, the encrypted events and photos, and the encrypted backup of your keys.</p>
+    <p><strong>Visible to the server, and therefore to the study lead as its operator:</strong></p>
+    <ul>
+      <li>sender and recipient, and therefore which two accounts form a couple,</li>
+      <li>times, number and size of the encrypted events,</li>
+      <li>when a device is connected, the device list and push registrations,</li>
+      <li>your display name,</li>
+      <li>IP addresses and app identifier (user agent): in the database – the server clears the history after 7 days, the most recent address per device can remain longer – as well as in technical logs and backups (see <a href="#retention">section 10</a>).</li>
+    </ul>
+    <p><strong>Not visible:</strong> the content of messages, journal entries, photos and milestones; the type of an event (all appear the same, as encrypted); your status, your pauses and settings.</p>
+    <p>The app does not send Matrix read receipts, typing indicators or automatic online status; online status is also turned off on the server. The server passes no content to the push gateway.</p>
+    <p>According to the study plan, this metadata is not analysed for the study. That is a commitment by the study lead, not a technical impossibility.</p>
+
+    <h2 id="limit">6. A limit of the encryption</h2>
+    <div class="box limit">
+      <p>The study lead cannot decrypt what is stored on the server. But the study lead creates the accounts, issues the initial passwords and, as the operator, can reset passwords; the app currently has no option to change your password. This makes it technically possible to sign in as you and make future messages readable. The study lead commits not to do so – it cannot be prevented technically.</p>
+    </div>
+
+    <h2 id="push">7. Notifications</h2>
+    <p>When a message arrives, the server wakes your iPhone through its own push gateway and Apple's push service (APNs). The wake-up message contains no text, only technical identifiers (event, room). Your iPhone fetches the message, decrypts it and then shows a notification such as "New message from …" itself – if notification windows are turned on, only within your time windows. Apple and the push gateway see the device token, the time and these identifiers, but no content.</p>
+
+    <h2 id="crash">8. Crash reports</h2>
+    <ul>
+      <li>The "Send crash reports" switch in the settings is <strong>off by default</strong>. Turning it off stops sending immediately.</li>
+      <li>It only works in builds that are set up for it; otherwise it is disabled and nothing is sent.</li>
+      <li>Reports go to GlitchTip on the study server, run by the study lead. They do not go to Apple or Google; for Apple's own collection see <a href="#testflight">section 9</a>.</li>
+      <li>A report about an error in the Dart part of the app contains only: the type of error, the program stack (function names, source files of the program code, lines), app version and build, iOS version, device model, time, an event ID and – only if you enter it – your participant code. The app discards the error text itself before sending.</li>
+      <li><strong>Limit:</strong> if the native part of the app crashes, the crash library sends its report itself on the next launch. This path does not pass through the app's filter; it contains a native program stack and device details. Whether it is free of content will be checked on the first real report.</li>
+      <li>GlitchTip deletes events after 30 days. The server's backups, however, include the crash database (see <a href="#retention">section 10</a>).</li>
+    </ul>
+
+    <h2 id="testflight">9. TestFlight (Apple)</h2>
+    <p>Twine is distributed through Apple's TestFlight. According to Apple, Apple collects crash logs, usage information and your feedback and sends them, together with your name and email address, to the developer; if you were invited through a public link, the developer does not see your name and email address. This applies regardless of the crash report switch in Twine and ends when you stop testing in TestFlight. Feedback sent through TestFlight is also provided to Apple. Details: <a href="https://testflight.apple.com/">testflight.apple.com</a>.</p>
+
+    <h2 id="retention">10. Retention and deletion</h2>
+    <ul>
+      <li><strong>Messages on the server:</strong> automatic deletion is turned off during the study.</li>
+      <li><strong>IP history in the database:</strong> 7 days.</li>
+      <li><strong>Logs:</strong> the server and the push gateway log mostly at the "info" level. Log files are rotated daily and 30 of them are kept; other logs are only limited in size. If the server writes little, an entry can remain for longer than 30 days.</li>
+      <li><strong>Backups:</strong> daily, with all server data including the crash database. On the server they are readable only by the administrator, but not encrypted; the study lead copies them to a computer with an encrypted disk. The backup scripts remove older copies only when a run succeeds (server after 14, computer after 30 days). There is currently no fixed maximum period.</li>
+      <li><strong>End of the study:</strong> all server data is to be deleted by 28 February 2027. The shutdown is planned but has not been carried out yet.</li>
+      <li><strong>Deletion on request:</strong> write to us at any time. Merely deactivating an account is not enough: the encrypted messages then remain on the server for another 7 days, photos for longer. A procedure that removes a couple's server data early has been prepared but not yet tested on the study server. Because the shared room belongs to both of you, deleting it also affects your partner's data.</li>
+    </ul>
+
+    <h2 id="rights">11. Your rights and contact</h2>
+    <p>You have the right of access, rectification, erasure and restriction of processing, the right to data portability and the right to object. You can withdraw any consent you have given at any time. You can lodge a complaint with a data protection supervisory authority.</p>
+    <p>Contact: <a href="mailto:support@devsalah.com">support@devsalah.com</a>. Study participants can also reach the study lead through the contact details in their information sheet.</p>
+    <p>We update this policy when the app, the server or the website change. The date at the top shows the current version.</p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Twine – research prototype, not on the App Store.</p>
+    <ul>
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/support/">Support</a></li>
+      <li><a href="/en/imprint/">Imprint</a></li>
+      <li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

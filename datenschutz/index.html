@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutz – Twine</title>
+  <meta name="description" content="Welche Daten Twine und der Studienserver verarbeiten, was der Server sehen kann und was nicht, Absturzberichte, Aufbewahrung und Löschung.">
+  <meta name="theme-color" content="#FAF6F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14131A" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://twine.devsalah.com/datenschutz/">
+  <link rel="alternate" hreflang="de" href="https://twine.devsalah.com/datenschutz/">
+  <link rel="alternate" hreflang="en" href="https://twine.devsalah.com/en/privacy/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/bilder/symbol-platzhalter.svg" alt="" width="32" height="32">Twine</a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="/datenschutz/" aria-current="page">Datenschutz</a></li>
+        <li><a href="/support/">Support</a></li>
+        <li><a href="/en/privacy/" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt" class="page">
+  <div class="wrap prose">
+    <h1>Datenschutz</h1>
+    <p class="updated">Stand: 15. November 2026</p>
+
+    <div class="box">
+      <p><strong>Kurz gesagt</strong></p>
+      <ul>
+        <li>Twine ist ein Forschungsprototyp und wird derzeit nur in einer Studie über TestFlight genutzt.</li>
+        <li>Nachrichten, Status, Freigabe-Einstellungen, Journal mit Fotos und Meilensteine sind Ende-zu-Ende-verschlüsselt. Der Server speichert sie nur verschlüsselt und kann sie nicht lesen.</li>
+        <li>Der Server sieht trotzdem Metadaten: welche zwei Konten ein Paar bilden, wann Geräte verbunden sind, wann und wie viele verschlüsselte Nachrichten welcher Größe fließen, und IP-Adressen.</li>
+        <li>Keine Werbung, kein Tracking, keine Nutzungsstatistik an den Studienleiter. Absturzberichte nur, wenn du sie einschaltest.</li>
+      </ul>
+    </div>
+
+    <p>Inhalt:</p>
+    <ol class="toc">
+      <li><a href="#verantwortlich">Verantwortlich</a></li>
+      <li><a href="#website">Diese Website</a></li>
+      <li><a href="#app">Twine und der Studienserver</a></li>
+      <li><a href="#geraet">Was auf deinem iPhone bleibt</a></li>
+      <li><a href="#server">Was der Server speichert und sieht</a></li>
+      <li><a href="#grenze">Eine Grenze der Verschlüsselung</a></li>
+      <li><a href="#push">Benachrichtigungen</a></li>
+      <li><a href="#absturz">Absturzberichte</a></li>
+      <li><a href="#testflight">TestFlight (Apple)</a></li>
+      <li><a href="#aufbewahrung">Aufbewahrung und Löschung</a></li>
+      <li><a href="#rechte">Deine Rechte und Kontakt</a></li>
+    </ol>
+
+    <h2 id="verantwortlich">1. Verantwortlich</h2>
+    <p>Für diese Website:</p>
+    <address>Salah Alhaji<br>Förderstedter Str. 36<br>39112 Magdeburg<br>Deutschland<br>E-Mail: <a href="mailto:support@devsalah.com">support@devsalah.com</a></address>
+    <p>Für die Daten der Studie (Studienkonten, Serverdaten, Absturzberichte): [offen] – wird nach der Regelung der Hochschule Düsseldorf festgelegt. Teilnehmende erhalten vor Beginn ein Informationsblatt und eine Einwilligungserklärung; dort stehen Ansprechpartner, Zweck und Fristen der Studie.</p>
+
+    <h2 id="website">2. Diese Website</h2>
+    <p>Die Website liegt bei GitHub Pages und wird über das Netz von Cloudflare ausgeliefert. Um die Seiten auszuliefern, verarbeiten diese Anbieter technisch deine IP-Adresse und Angaben zur Anfrage wie aufgerufene Seite, Zeit und Browser. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: unser berechtigtes Interesse, die Website zuverlässig und sicher bereitzustellen. Wie lange die Anbieter diese Daten aufbewahren, steht in ihren Datenschutzerklärungen: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, <a href="https://www.cloudflare.com/de-de/privacypolicy/">Cloudflare</a>.</p>
+    <p>Die Website selbst setzt keine Cookies, speichert nichts in deinem Browser und lädt keine Schriften, Skripte oder Analysewerkzeuge von Dritten. Cloudflare schützt E-Mail-Adressen auf diesen Seiten vor Spam-Programmen: Es kann sie in der Seite ersetzen und ein kleines Skript ergänzen, das von der Adresse dieser Website geladen wird und sie in deinem Browser anzeigt.</p>
+    <p>Wenn du uns per E-Mail schreibst, nutzen wir deine Adresse und deine Nachricht nur, um zu antworten. E-Mails an Adressen unter devsalah.com empfängt Cloudflare Email Routing und leitet sie an unser Postfach weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Wir löschen die Nachrichten, wenn die Anfrage erledigt ist, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+
+    <h2 id="app">3. Twine und der Studienserver</h2>
+    <p>Twine verbindet zwei Personen in einem privaten, Ende-zu-Ende-verschlüsselten Raum über das Matrix-Protokoll. Die App läuft über einen eigenen Matrix-Server, den der Studienleiter selbst bei der Hetzner Online GmbH betreibt. Auf diesem Server laufen auch das Push-Gateway und, nur für Absturzberichte, GlitchTip.</p>
+    <ul>
+      <li>Eine offene Registrierung gibt es nicht; die Konten legt der Studienleiter an.</li>
+      <li>Der Server tauscht keine Daten mit anderen Matrix-Servern aus (Föderation ausgeschaltet).</li>
+      <li>Twine nutzt keine Werbe- oder Analysedienste und erklärt gegenüber Apple kein Tracking.</li>
+    </ul>
+
+    <h2 id="geraet">4. Was auf deinem iPhone bleibt</h2>
+    <ul>
+      <li>Die App speichert Nachrichten und ihren Zustand in einer verschlüsselten Datenbank (SQLCipher). Der Schlüssel dazu liegt im Schlüsselbund deines iPhones.</li>
+      <li>Deinen Wiederherstellungs-Schlüssel erzeugt die App auf deinem Gerät. Der Studienleiter kennt ihn nicht; auf dem Server liegt nur die damit verschlüsselte Sicherung.</li>
+      <li><strong>„Für dich“:</strong> Diese Hinweise entstehen nur auf deinem Gerät, sind nur für dich sichtbar und verlassen das Gerät nie. Beide Schalter dafür sind standardmäßig aus.</li>
+      <li><strong>„Anonyme Nutzungsstatistik“:</strong> Wenn eingeschaltet, wird nur auf deinem Gerät gezählt. Die App sendet diese Zahlen nicht.</li>
+      <li><strong>Diagnoseprotokoll:</strong> eine Zusammenfassung technischer Befunde (Anmeldung, Verbindung, Benachrichtigungen, Wiederherstellungs-Schlüssel). Es enthält keine Nachrichten, Namen, Twine-IDs, Raum-Kennungen oder Schlüssel, läuft nach spätestens 7 Tagen ab und verlässt dein Gerät nur, wenn du es selbst teilst.</li>
+      <li><strong>Berechtigungen:</strong> Twine fragt nach Zugriff auf deine Fotos, wenn du ein Bild ins Journal teilst, und nach Face ID für die App-Sperre. Nach deinem Standort fragt Twine nicht.</li>
+    </ul>
+
+    <h2 id="server">5. Was der Server speichert und sieht</h2>
+    <p><strong>Gespeichert:</strong> dein Konto (Kennung, Anzeigename, Passwort als Hash), die Liste deiner angemeldeten Geräte, die Push-Registrierung deines iPhones, die Mitgliedschaft im gemeinsamen Raum, die verschlüsselten Ereignisse und Fotos sowie die verschlüsselte Sicherung deiner Schlüssel.</p>
+    <p><strong>Sichtbar für den Server und damit für den Studienleiter als Betreiber:</strong></p>
+    <ul>
+      <li>Absender und Empfänger, also auch, welche zwei Konten ein Paar bilden,</li>
+      <li>Zeitpunkte, Anzahl und Größe der verschlüsselten Ereignisse,</li>
+      <li>wann ein Gerät verbunden ist, die Geräteliste und Push-Registrierungen,</li>
+      <li>dein Anzeigename,</li>
+      <li>IP-Adressen und App-Kennung (User-Agent): in der Datenbank – den Verlauf bereinigt der Server nach 7 Tagen, die zuletzt genutzte Adresse je Gerät kann länger stehen bleiben – sowie in technischen Protokollen und Sicherungskopien (siehe <a href="#aufbewahrung">Abschnitt 10</a>).</li>
+    </ul>
+    <p><strong>Nicht sichtbar:</strong> Inhalte von Nachrichten, Journal, Fotos und Meilensteinen; die Art eines Ereignisses (alle erscheinen gleich als verschlüsselt); dein Status, deine Pausen und Einstellungen.</p>
+    <p>Lesebestätigungen, Tippanzeigen und die automatische Online-Anzeige von Matrix sendet die App nicht; die Online-Anzeige ist auch am Server ausgeschaltet. Der Server gibt keine Inhalte an das Push-Gateway weiter.</p>
+    <p>Diese Metadaten werden laut Studienplan nicht für die Studie ausgewertet. Das ist eine Zusage des Studienleiters, keine technische Unmöglichkeit.</p>
+
+    <h2 id="grenze">6. Eine Grenze der Verschlüsselung</h2>
+    <div class="box limit">
+      <p>Was auf dem Server gespeichert ist, kann der Studienleiter nicht entschlüsseln. Der Studienleiter legt aber die Konten an, vergibt die Startpasswörter und kann als Betreiber Passwörter zurücksetzen; die App bietet derzeit keinen Passwortwechsel. Damit wäre es technisch möglich, sich an deiner Stelle anzumelden und so künftige Nachrichten lesbar zu machen. Der Studienleiter sagt zu, das nicht zu tun – verhindern lässt es sich technisch nicht.</p>
+    </div>
+
+    <h2 id="push">7. Benachrichtigungen</h2>
+    <p>Geht eine Nachricht ein, weckt der Server dein iPhone über das eigene Push-Gateway und Apples Push-Dienst (APNs). Die Weck-Nachricht enthält keinen Text, nur technische Kennungen (Ereignis, Raum). Dein iPhone holt die Nachricht, entschlüsselt sie und zeigt dann selbst einen Hinweis wie „Neue Nachricht von …“ – bei eingeschaltetem Benachrichtigungsfenster nur innerhalb deiner Zeitfenster. Apple und das Push-Gateway sehen dabei die Gerätekennung (Token), den Zeitpunkt und diese Kennungen, aber keinen Inhalt.</p>
+
+    <h2 id="absturz">8. Absturzberichte</h2>
+    <ul>
+      <li>Der Schalter „Absturzberichte senden“ in den Einstellungen ist <strong>standardmäßig aus</strong>. Ausschalten stoppt das Senden sofort.</li>
+      <li>Er funktioniert nur in Versionen, die dafür eingerichtet sind; sonst ist er deaktiviert und es wird nichts gesendet.</li>
+      <li>Empfänger ist GlitchTip auf dem Studienserver, vom Studienleiter selbst betrieben. Diese Berichte gehen nicht an Apple oder Google; zu Apples eigener Erhebung siehe <a href="#testflight">Abschnitt 9</a>.</li>
+      <li>Ein Bericht über einen Fehler im Dart-Teil der App enthält nur: Fehlerart, Programm-Stapel (Funktionsnamen, Quelldateien des Programmcodes, Zeilen), App-Version und Build, iOS-Version, Gerätemodell, Zeitpunkt, eine Ereigniskennung und – nur wenn du ihn einträgst – deinen Teilnehmer-Code. Den Fehlertext selbst verwirft die App vor dem Senden.</li>
+      <li><strong>Grenze:</strong> Stürzt der native Teil der App ab, sendet die Absturzbibliothek ihren Bericht beim nächsten Start selbst. Dieser Weg läuft nicht durch den Filter der App; er enthält einen nativen Programm-Stapel und Geräteangaben. Ob er frei von Inhalten ist, wird am ersten echten Bericht geprüft.</li>
+      <li>GlitchTip löscht Ereignisse nach 30 Tagen. Die Sicherungskopien des Servers enthalten die Absturzdatenbank aber mit (siehe <a href="#aufbewahrung">Abschnitt 10</a>).</li>
+    </ul>
+
+    <h2 id="testflight">9. TestFlight (Apple)</h2>
+    <p>Twine wird über Apples TestFlight verteilt. Laut Apple erhebt Apple dabei Absturzprotokolle, Nutzungsinformationen und dein Feedback und gibt sie zusammen mit deinem Namen und deiner E-Mail-Adresse an den Entwickler weiter; bei einer Einladung über einen öffentlichen Link sieht der Entwickler Namen und E-Mail-Adresse nicht. Das gilt unabhängig vom Schalter für Absturzberichte in Twine und endet, wenn du den Test in TestFlight beendest. Feedback über TestFlight erhält auch Apple. Details: <a href="https://testflight.apple.com/">testflight.apple.com</a>.</p>
+
+    <h2 id="aufbewahrung">10. Aufbewahrung und Löschung</h2>
+    <ul>
+      <li><strong>Nachrichten auf dem Server:</strong> Eine automatische Löschung ist während der Studie ausgeschaltet.</li>
+      <li><strong>IP-Verlauf in der Datenbank:</strong> 7 Tage.</li>
+      <li><strong>Protokolle:</strong> Server und Push-Gateway protokollieren überwiegend auf der Stufe „Info“. Protokolldateien werden täglich gewechselt und 30 davon aufbewahrt; andere Protokolle sind nur in ihrer Größe begrenzt. Schreibt der Server wenig, kann ein Eintrag länger als 30 Tage erhalten bleiben.</li>
+      <li><strong>Sicherungskopien:</strong> täglich, mit allen Serverdaten einschließlich der Absturzdatenbank. Auf dem Server sind sie nur für den Administrator lesbar, aber nicht verschlüsselt; eine Kopie holt der Studienleiter auf einen Rechner mit verschlüsselter Festplatte. Ältere Kopien entfernen die Sicherungsskripte nur bei einem erfolgreichen Lauf (Server nach 14, Rechner nach 30 Tagen). Eine feste Höchstdauer gibt es derzeit nicht.</li>
+      <li><strong>Ende der Studie:</strong> Alle Serverdaten sollen bis zum 28. Februar 2027 gelöscht werden. Der Abbau ist geplant, aber noch nicht ausgeführt.</li>
+      <li><strong>Löschung auf Wunsch:</strong> Schreib uns jederzeit. Ein Konto nur zu deaktivieren reicht dafür nicht: Die verschlüsselten Nachrichten bleiben danach noch 7 Tage, Fotos länger auf dem Server. Ein Verfahren, das die Serverdaten eines Paares vorzeitig entfernt, ist vorbereitet, aber am Studienserver noch nicht erprobt. Weil der gemeinsame Raum euch beiden gehört, betrifft seine Löschung auch die Daten deines Partners.</li>
+    </ul>
+
+    <h2 id="rechte">11. Deine Rechte und Kontakt</h2>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung, auf Datenübertragbarkeit und auf Widerspruch. Eine erteilte Einwilligung kannst du jederzeit widerrufen. Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>
+    <p>Kontakt: <a href="mailto:support@devsalah.com">support@devsalah.com</a>. Teilnehmende der Studie erreichen den Studienleiter auch über die Kontaktwege aus ihrem Informationsblatt.</p>
+    <p>Wir passen diese Erklärung an, wenn sich App, Server oder Website ändern. Das Datum oben zeigt den Stand.</p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Twine – Forschungsprototyp, nicht im App Store.</p>
+    <ul>
+      <li><a href="/">Startseite</a></li>
+      <li><a href="/support/">Support</a></li>
+      <li><a href="/impressum/">Impressum</a></li>
+      <li><a href="/en/privacy/" lang="en" hreflang="en">English</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
