@@ -21,10 +21,9 @@ Englisch unter `/en/`). Kein Bauwerkzeug, keine Skripte, keine fremden Schriften
 - **App-Symbol:** erledigt. `bilder/symbol.svg` ist die Quelle `twine/assets/branding/app_icon.svg`
   (Variante B); `favicon.svg` ist dasselbe Bild mit runden Ecken. Ändert sich das Symbol in der App, beide
   Dateien daraus neu ableiten.
-- **Bildschirmfotos:** In `index.html` und `en/index.html` je `<li><div class="shot">n</div></li>` durch
-  `<li><img src="/bilder/de-DE/0n.png" width="1206" height="2622" alt="…" loading="lazy"></li>` ersetzen
-  (Quelle `twine-worktrees/w6-screens/store/iphone/<sprache>/`), `aria-hidden` an der Liste entfernen und den
-  Satz „Bildschirmfotos folgen.“ streichen.
+- **Bildschirmfotos:** erledigt. `bilder/de-DE/01–05.webp` und `bilder/en-US/01–05.webp` sind die Store-Bilder
+  Wir, Chat, Journal, Vier gewinnt und Ich aus `twine/store/iphone/<sprache>/`, verkleinert auf 603 px Breite
+  (`cwebp -q 84 -resize 603 0`). Die Bilder zeigen erfundene Beispieldaten; das steht auch auf der Seite.
 - **`[offen]`** im Impressum und in der Datenschutzerklärung (Abschnitt 1) ausfüllen oder die Zeile streichen.
 
 ## Veröffentlichen
