@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Platzhalter, bis das App-Symbol aus twine-worktrees/w6-release/assets/branding/ vorliegt -->
+  <rect width="64" height="64" rx="14" fill="#26232F"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" fill="#E8B04B">T</text>
+</svg>
