@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy – Twine</title>
-  <meta name="description" content="Which data Twine and the study server process, what the server can and cannot see, crash reports, retention and deletion.">
+  <title>Privacy – Unapart</title>
+  <meta name="description" content="Which data Unapart and the study server process, what the server can and cannot see, crash reports, retention and deletion.">
   <meta name="theme-color" content="#FAF6F0" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#14131A" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://twine.devsalah.com/en/privacy/">
@@ -17,7 +17,7 @@
 <a class="skip" href="#content">Skip to content</a>
 <header class="site-head">
   <div class="wrap bar">
-    <a class="brand" href="/en/"><img src="/bilder/symbol.svg" alt="" width="32" height="32">Twine</a>
+    <a class="brand" href="/en/"><img src="/bilder/symbol.svg" alt="" width="32" height="32">Unapart</a>
     <nav class="nav" aria-label="Main navigation">
       <ul>
         <li><a href="/en/privacy/" aria-current="page">Privacy</a></li>
@@ -36,7 +36,7 @@
     <div class="box">
       <p><strong>In short</strong></p>
       <ul>
-        <li>Twine is a research prototype and is currently used only in a study via TestFlight.</li>
+        <li>Unapart is a research prototype and is currently used only in a study via TestFlight.</li>
         <li>Messages, status, sharing settings, the journal with photos and milestones are end-to-end encrypted. The server only stores them encrypted and cannot read them.</li>
         <li>The server still sees metadata: which two accounts form a couple, when devices are connected, when and how many encrypted messages of which size are exchanged, and IP addresses.</li>
         <li>No ads, no tracking, no usage statistics sent to the study lead. Crash reports only if you turn them on.</li>
@@ -47,7 +47,7 @@
     <ol class="toc">
       <li><a href="#controller">Controller</a></li>
       <li><a href="#website">This website</a></li>
-      <li><a href="#app">Twine and the study server</a></li>
+      <li><a href="#app">Unapart and the study server</a></li>
       <li><a href="#device">What stays on your iPhone</a></li>
       <li><a href="#server">What the server stores and sees</a></li>
       <li><a href="#limit">A limit of the encryption</a></li>
@@ -68,12 +68,12 @@
     <p>The website itself sets no cookies, stores nothing in your browser and loads no fonts, scripts or analytics from third parties. Cloudflare protects the email addresses on these pages from spam bots: it can replace them in the page and add a small script, served from this website's own address, that displays them in your browser.</p>
     <p>If you write to us by email, we use your address and your message only to answer you. Emails to addresses at devsalah.com are received via Cloudflare Email Routing and forwarded to our mailbox. The legal basis is Art. 6(1)(f) GDPR. We delete the messages once your request has been dealt with, unless statutory retention obligations apply.</p>
 
-    <h2 id="app">3. Twine and the study server</h2>
-    <p>Twine connects two people in a private, end-to-end encrypted space using the Matrix protocol. The app runs on a dedicated Matrix server that the study lead runs at Hetzner Online GmbH. The push gateway and, for crash reports only, GlitchTip run on the same server.</p>
+    <h2 id="app">3. Unapart and the study server</h2>
+    <p>Unapart connects two people in a private, end-to-end encrypted space using the Matrix protocol. The app runs on a dedicated Matrix server that the study lead runs at Hetzner Online GmbH. The push gateway and, for crash reports only, GlitchTip run on the same server.</p>
     <ul>
       <li>There is no open sign-up; the study lead creates the accounts.</li>
       <li>The server does not exchange data with other Matrix servers (federation is turned off).</li>
-      <li>Twine uses no advertising or analytics services and declares no tracking to Apple.</li>
+      <li>Unapart uses no advertising or analytics services and declares no tracking to Apple.</li>
     </ul>
 
     <h2 id="device">4. What stays on your iPhone</h2>
@@ -82,8 +82,8 @@
       <li>The app creates your recovery key on your device. The study lead does not know it; the server only holds the backup encrypted with it.</li>
       <li><strong>"For you":</strong> these prompts are created only on your device, are visible only to you and never leave the device. Both switches for them are off by default.</li>
       <li><strong>"Anonymous usage statistics":</strong> if turned on, counting happens only on your device. The app does not send these numbers.</li>
-      <li><strong>Diagnostic log:</strong> a summary of technical findings (sign-in, connection, notifications, recovery key). It contains no messages, names, Twine IDs, room identifiers or keys, expires after 7 days at the latest and only leaves your device if you share it yourself.</li>
-      <li><strong>Permissions:</strong> Twine asks for access to your photos when you share a picture in the journal, and for Face ID for the app lock. Twine does not ask for your location.</li>
+      <li><strong>Diagnostic log:</strong> a summary of technical findings (sign-in, connection, notifications, recovery key). It contains no messages, names, Unapart IDs, room identifiers or keys, expires after 7 days at the latest and only leaves your device if you share it yourself.</li>
+      <li><strong>Permissions:</strong> Unapart asks for access to your photos when you share a picture in the journal, and for Face ID for the app lock. Unapart does not ask for your location.</li>
     </ul>
 
     <h2 id="server">5. What the server stores and sees</h2>
@@ -119,7 +119,7 @@
     </ul>
 
     <h2 id="testflight">9. TestFlight (Apple)</h2>
-    <p>Twine is distributed through Apple's TestFlight. According to Apple, Apple collects crash logs, usage information and your feedback and sends them, together with your name and email address, to the developer; if you were invited through a public link, the developer does not see your name and email address. This applies regardless of the crash report switch in Twine and ends when you stop testing in TestFlight. Feedback sent through TestFlight is also provided to Apple. Details: <a href="https://testflight.apple.com/">testflight.apple.com</a>.</p>
+    <p>Unapart is distributed through Apple's TestFlight. According to Apple, Apple collects crash logs, usage information and your feedback and sends them, together with your name and email address, to the developer; if you were invited through a public link, the developer does not see your name and email address. This applies regardless of the crash report switch in Unapart and ends when you stop testing in TestFlight. Feedback sent through TestFlight is also provided to Apple. Details: <a href="https://testflight.apple.com/">testflight.apple.com</a>.</p>
 
     <h2 id="retention">10. Retention and deletion</h2>
     <ul>
@@ -140,7 +140,7 @@
 
 <footer class="site-foot">
   <div class="wrap">
-    <p>Twine – research prototype, not on the App Store.</p>
+    <p>Unapart – research prototype, not on the App Store.</p>
     <ul>
       <li><a href="/en/">Home</a></li>
       <li><a href="/en/support/">Support</a></li>
