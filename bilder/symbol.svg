@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <title>Twine: two threads, two loops</title>
+  <title>Unapart: two threads, two loops</title>
   <!-- Quelle: twine/assets/branding/app_icon.svg (Variante B) -->
   <defs>
     <radialGradient id="ground" cx="512" cy="470" r="640" gradientUnits="userSpaceOnUse">

@@ -1,7 +1,10 @@
 # twine-landing
 
-Statische Website zu Twine unter `twine.devsalah.com` (Startseite, Datenschutz, Support, Impressum; Deutsch und
-Englisch unter `/en/`). Kein Bauwerkzeug, keine Skripte, keine fremden Schriften, keine Cookies.
+Statische Website zu Unapart unter `unapart.devsalah.com` (Startseite, Datenschutz, Support, Impressum; Deutsch
+und Englisch unter `/en/`). Kein Bauwerkzeug, keine Skripte, keine fremden Schriften, keine Cookies.
+
+Name: Die App heißt Unapart. „twine“ ist der Arbeitstitel und bleibt im Namen dieses Repos und in Pfaden ins
+App-Repo (`twine/…`).
 
 ## Aufbau
 
@@ -14,7 +17,7 @@ Englisch unter `/en/`). Kein Bauwerkzeug, keine Skripte, keine fremden Schriften
 | `style.css` | gemeinsames Stylesheet, Farben aus `twine/lib/app/theme/twine_colors.dart` |
 | `bilder/` | App-Symbol und später die Bildschirmfotos |
 | `store/store-source.json` | Store- und TestFlight-Texte (Entwurf), Prüfung mit `python3 store/pruefe_texte.py` |
-| `CNAME` | `twine.devsalah.com` für GitHub Pages |
+| `CNAME` | `unapart.devsalah.com` für GitHub Pages |
 
 ## Platzhalter ersetzen
 
@@ -28,7 +31,7 @@ Englisch unter `/en/`). Kein Bauwerkzeug, keine Skripte, keine fremden Schriften
 
 ## Veröffentlichen
 
-GitHub Pages aus `main` (Wurzel), Datei `CNAME` liegt bei. DNS: `twine` als CNAME auf `salahxiv.github.io`.
-Die Datenschutzerklärung geht davon aus, dass die Seite wie `amber.devsalah.com` über Cloudflare ausgeliefert
+GitHub Pages aus `main` (Wurzel), Datei `CNAME` liegt bei. DNS: `unapart` als CNAME auf `salahxiv.github.io`
+(am 15.11.2026 noch nicht gesetzt). Die Datenschutzerklärung geht davon aus, dass die Seite wie `amber.devsalah.com` über Cloudflare ausgeliefert
 wird. Ohne Cloudflare-Proxy („DNS only“) in Abschnitt 2 (DE und EN) „und wird über das Netz von Cloudflare
 ausgeliefert“ und den Satz zum Schutz der E-Mail-Adressen streichen; der Satz zu Cloudflare Email Routing bleibt.
