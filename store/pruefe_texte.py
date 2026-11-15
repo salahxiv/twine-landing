@@ -18,7 +18,7 @@ SOURCE = REPO / "store" / "store-source.json"
 CHECK_LIMITS = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(
     "/Volumes/DockerSSD/GitHub/fixes-knowledge-base/apps/werkzeuge/check_limits.py")
 TESTFLIGHT_LIMIT = 4000
-SITE = "https://twine.devsalah.com/"
+SITE = "https://unapart.devsalah.com/"
 # Versprechen über Wirkung oder Gesundheit (Wortanfänge, klein geschrieben)
 FORBIDDEN = ["gesund", "heil", "therap", "rettet", "retten", "stärk", "verbesser", "näher", "glücklich",
              "health", "heal", "therap", "save your relationship", "strengthen", "improve", "closer", "happier", "better relationship"]
